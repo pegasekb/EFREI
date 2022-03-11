@@ -58,6 +58,3 @@ if [ $valide -eq "0" ] # Si rien n'est trouvé on affiche
 then
 echo "Il n'y a pas de fichier en commun dans ses dossiers"
 fi
-
-#J'avais pour objetif de rentre le scrpit plus performant changant d'element de la liste 1 des que l'elements de la liste 2
-#etait plus grand que celui de la liste 1 mais je n'arrive pas a faire de comparasion entre 2 chaines de caratere.
