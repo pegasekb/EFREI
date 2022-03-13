@@ -15,12 +15,12 @@ then
         if [ -d "$2" ] #On verifie que l'arguements est bien un dossier
             then
             cd "$1" #On se déplace dans le dossier 
-            table1=( $(ls) ) #On mets dans un lite le resultat du ls 
+            table1=( $(ls -F | grep -v '/$') ) #On mets dans un lite le resultat du ls 
             #tri_table1=( $(printf "%s\n" ${table1[*]} | sort -n) )# On les tris dans l'ordre croissant
 
 
             cd "$2" #On se déplace dans le dossier 
-            table2=( $(ls) )  #On mets dans un lite le resultat du ls 
+            table2=( $(ls -F | grep -v '/$') )  #On mets dans un lite le resultat du ls 
             #tri_table2=( $(printf "%s\n" ${table2[*]} | sort -n) )# On les tris dans l'ordre croissant
             
 

@@ -13,14 +13,13 @@ then
 
 cd "$1" #On se deplace dans ce dossier
 
-exe=$(find -maxdepth 1 -type f -executable | wc -l) # Compte les fichier qui sont  executable dans le repertoir courant
-dir=$(find -maxdepth 1 -type d | wc -l) # Compte les dossier dans le repertoir courant
-file=$(find -maxdepth 1 -type f | wc -l) # Compte les fichier dans le repertoir courant
+exe=$(ls -Fla | grep \*$ | wc -l) # Compte les fichier qui sont  executable dans le repertoir courant
+dir=$(ls -d */ | wc -l) # Compte les dossier dans le repertoir courant
+file=$(ls -l | egrep -v '^d' | wc -l) # Compte les fichier dans le repertoir courant
 
-dir=$( expr $dir - 1) #Pour ne pas compte le dossier courant
 
-echo "Dans le repertoir $1 :"
+echo "Dans le repertoir $(pwd) :"
 echo "Il y a $dir dossier(s)"
 echo "Il y a $file fichier(s)"
-echo "Donc $exe fichier(s) executable"
+echo "Dont $exe fichier(s) executable"
 fi

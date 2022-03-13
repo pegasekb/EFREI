@@ -6,14 +6,15 @@
 
 #!/bin/sh
 
+nombre=0
 
+nombre=$(ls -l | egrep -v 'd' | grep $1 | wc -l ) # COmment pour voir si le fichier existe dans le dossier courant
 for ((c=1; c<=2; c++)) #Boucle qui permet de remonter de 2 dans l'arboréssance
 do
 cd ..
+nombre=$(( $nombre + $(ls -l | egrep -v 'd' | grep $1 | wc -l ) )) # Compteur du nombre de fois que le fichier apparait
 done
 
-find . | grep $1 # Recherche avec le find le fichier dans les dossiers 
-nombre=$(find . | grep $1 | wc -l ) # Compte le nb de fois que le fichier a etait trouvé
 echo "Le fichier à était trouvé $nombre fois"
 
 
