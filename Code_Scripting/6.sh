@@ -50,7 +50,7 @@ for line in $(cat user.txt)
             then
             echo "Mots de passe juste. Vous êtes authentifié"
         else
-            echo "MDP faux"
+            echo "Le mots de login ou le mots de passe est faux"
         fi
     fi
 done
