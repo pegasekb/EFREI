@@ -12,10 +12,10 @@
 
 import os
 import sys
-from unittest import expectedFailure
 
-if len(sys.argv) > 1 : 
+if len(sys.argv) > 1 : # On verifiqu'il ya au moins 1 argument
 
+#Partie avec le -C
     if sys.argv[1] == "-c": # Verifie si y a le -c 
         if len(sys.argv)>2 : # Verifie si il y a bien le nom du fichier
             if len (sys.argv) >3: # Verifie si y a un repertoir d'indiqué
@@ -36,6 +36,7 @@ if len(sys.argv) > 1 :
             print ("ERROR : Il faut mettre le nom du fichier que l'on veut créer")
 
 
+#Partie avec -R
     if sys.argv[1] == "-r": # Verifie si y a le -r
         if len(sys.argv)>2 : # Verifie si il y a bien le nom du fichier
             try : # Verifie qu'il peut ... et le fait
@@ -57,7 +58,8 @@ if len(sys.argv) > 1 :
                         print () # On reboucle
         else : 
             print ("Pas de nom de fichier")
-    
+
+#Partie avec le -A
     if sys.argv[1] == "-a": # Verifie si y a le -a
         if len(sys.argv)>2 : # Verifie si il y a bien le nom du fichier
             if len (sys.argv)>3 : #Verifite qu'il y a un chaine de caratere ou un fichier
@@ -75,9 +77,21 @@ if len(sys.argv) > 1 :
                 except : # Si le fichier sys.argv[2] n'est pas lisibles ...
                     print(sys.argv[2], "ne peut pas etre ouvert ou n'existe pas")
     
-            
-        
 
+#Parite avec le -D
+    if sys.argv[1] == "-d": # Verifie si y a le -d
+        if len(sys.argv)>2 : # Verifie si il y a bien le nom du fichier  
+            try : # On essaye de   ....
+                os.remove (sys.argv[2]) # Suiprimer le fichier sys.argv[2]
+            except : #Sinon on affiche l'erreur
+                print("Le fichier ", sys.argv[2], " n'a pas etait trouvé")
+
+# Partie avec le -t
+    if sys.argv[1] == "-t": # Verifie si y a le -t
+            if len(sys.argv)>2 : # Verifie si il y a bien le nom du fichier 
+                os.system("file "+sys.argv[2]) # On utilise la commande file de bash pour trouvé le type de fichier
+            else: # 
+                print ("Il y a pas de fichier a analyser")
 
 else :
     print ("Il y a pas d'argument")
