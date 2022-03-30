@@ -1,3 +1,5 @@
+#Paul Blanc
+
 # Créez un script prend plusieurs arguments :
 # a. -c
 # i. Cette option indique la création d’un fichier. Cette option doit être suivi du nom du fichier à créer. Si aucun nom n’est défini, le script retour une erreur. Le fichier est créé dans le répertoire courant, sinon un Fullpath est requis.
