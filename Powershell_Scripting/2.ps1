@@ -5,4 +5,5 @@
 # b.Affiche : « Nom du script: monscript.py»
 # c.Affiche : « mes arguments : hello world »
 
-
+Write-Host 'Nom du script : ' $MyInvocation.MyCommand.Name
+Write-Host 'Mes arguments :' $args

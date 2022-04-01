@@ -4,7 +4,7 @@
 #EX: «Nous sommes au cours de Scripting»
 # ******************************************************
 # *                                                    *
-# *             Nous sommes au cours de scripting      *
+#               Nous sommes au cours de scripting       
 # *               *****************************        *
 # *                         Nom Host                   *
 # *                    Répertoire courant              *
@@ -12,5 +12,13 @@
 # ******************************************************
 # 
 # 
-# 
-# 
+
+
+Write-Host "******************************************************"
+Write-Host "*                                                    *"
+Write-Host "                       "$args
+Write-Host "*               *****************************        *"
+Write-Host "                "$env:COMPUTERNAME
+Write-Host "                   "$Pwd
+Write-Host "*                     ***************                *"
+Write-Host "******************************************************"
