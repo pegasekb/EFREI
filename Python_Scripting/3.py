@@ -10,7 +10,6 @@ import string
 import random
 import time
 import sys
-import readline
 import os
 # Fonction qui logs les tenative de connection
 def logs (user,etat):
@@ -18,21 +17,21 @@ def logs (user,etat):
     f= open (user, "a")
     f.write ((etat+" de connection le "+time.asctime()+"\n"))
     f.close ()
-    return
+    
 
 # Fonction qui ecrit les nouveaux utilisateur
 def sigin (user, passwrd):
         print ("Le mots de passe à était engregister")
         open("user.txt", "a").write("\n"+user)
         open("pass.txt", "a").write("\n"+passwrd)
-        return
+        
 
 #Décomposition lignes par lignes des fichier user.txt et pass.txt en liste pour lire les lignes plus facilement
 listeuser= open("user.txt").read().splitlines()
 listepass= open("pass.txt").read().splitlines()
 
 
-for a in range (1,2) : # Boucle des 5 tentatives
+for a in range (1,5) : # Boucle des 5 tentatives
     # Demande de login / password
     print ("Login")
     user=input()
