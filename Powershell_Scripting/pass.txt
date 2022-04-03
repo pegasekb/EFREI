@@ -1,6 +1,3 @@
 pass
 mdp
 password
-test
-coucou
-coucou
