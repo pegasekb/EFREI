@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Crée un script qui permet d’authentifier des utilisateurs par nom et mot de passe.
 # a. Les informations d’authentification doivent être stockées dans deux fichiers différents pour des questions de sécurité. User.txt et pass.txt.

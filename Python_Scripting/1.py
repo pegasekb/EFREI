@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui affiche son propre nom et tous ses arguments.
 # a. EX : ./monscript.py hello world

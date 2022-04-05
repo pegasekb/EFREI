@@ -5,8 +5,30 @@
 # ou exécuter chaque fichier.
 
 import os
+from posixpath import split
+import string
 import sys
 
+try :
+    print (open(sys.argv[1], 'r').read)
+    test=1
+        
+except :
+    test=0
 
-emplacement = sys.argv [1]
-os.system( 'ls ,emplacement')
+if (test == 1) :
+    try :
+        cat ='cat '+sys.argv[1]
+        os.system(cat)
+    except: 
+        exe='./'+sys.argv[1]
+        os.system(exe)
+else : 
+ 
+       os.listdir ('.')
+
+
+
+
+# emplacement = sys.argv [1]
+# os.system( 'ls ,emplacement')

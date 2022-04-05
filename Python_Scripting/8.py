@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui prend en argument le nom d’un répertoire (fullpath).
 # Le script doit s’assurer que le fichier mis en argument est un répertoire,

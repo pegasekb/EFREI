@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui demande à l’utilisateur de taper son nom et son prénom. 
 # Ces informations sont ensuite affichées sur le STDIN.

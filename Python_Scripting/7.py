@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui prend comme argument le nom d’un fichier.
 # Le script doit rechercher le fichier dans le répertoire courant 
