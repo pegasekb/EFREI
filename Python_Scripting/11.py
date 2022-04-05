@@ -1,4 +1,4 @@
-#Paul Blanc fini
+#Paul Blanc & Jay AMIN fini
 
 # Créez un script prend plusieurs arguments :
 # a. -c

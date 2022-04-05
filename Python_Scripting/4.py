@@ -1,4 +1,4 @@
-#Paul Blanc fini
+#Paul Blanc & Jay AMIN fini
 
 # Créer un script qui permet de générer deux suites d’entier contigu.
 #  Les bornes sont données par l’utilisateur. Ensuite le script retourne « True »

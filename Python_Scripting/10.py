@@ -1,4 +1,4 @@
-#Paul Blanc fini
+#Paul Blanc & Jay AMIN fini
 
 # Le script retourne les fichiers communs aux deux répertoires 
 # qui ne partage pas le nom d’un répertoire. Les répertoires peuvent contenir 
