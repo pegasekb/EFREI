@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Crée un script qui permet d’authentifier des utilisateurs par nom et mot de passe. 
 

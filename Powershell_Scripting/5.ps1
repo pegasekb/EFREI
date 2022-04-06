@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui prend deux répertoirescomme paramètres
 # a.Le script vérifie que les deux répertoires existent puis retourne un fichier «.dat» 

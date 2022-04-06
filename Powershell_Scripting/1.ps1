@@ -1,4 +1,4 @@
-#Paul Blanc
+#Paul Blanc fini
 
 # Créer un script qui affiche le contenu de la variable USERDOMAIN. Que contient-il?
 
