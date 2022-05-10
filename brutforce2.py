@@ -92,7 +92,7 @@ if Nb_Arg >= 4 :
     try :
         logdico = open(sys.argv[4]).read().splitlines()
     except :
-        print("'le dictionnaire n'existe pas ou n'est pas lisible")
+        print("le dictionnaire n'existe pas ou n'est pas lisible")
         quit()
     for login in logdico :
         for password in passdico :            
