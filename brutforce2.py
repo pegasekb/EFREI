@@ -38,7 +38,7 @@ if sys.argv[1] == "ssh": #fonction faire des requet ssh avec la ligne du dico
         # A voir ce que fait la ligne avant
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         try: # Ligne de tentative de connection
-            ssh_client.connect(hostname=url, username=login, password=password, auth_timeout=0.5)
+            ssh_client.connect(hostname=url, username=login, password=password, auth_timeout=1)
 
         except:
             print("Test de connection qui a echoué avec",login,":", password)
